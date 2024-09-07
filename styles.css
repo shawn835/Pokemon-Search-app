@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* text-transform: capitalize; */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(img/bg.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h3 {
+    text-align: center;
+
+}
+
+.form,
+.name-id,
+.weight-height {
+    margin-top: 1rem;
+}
+
+input {
+    padding: 6px;
+    outline: none;
+    border-radius: 8px;
+    border: none;
+    border: 2px solid grey;
+}
+
+#search-button {
+    border: none;
+    border: 2px solid grey;
+    cursor: pointer;
+    padding: 6px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    /* text-align: center; */
+    background-image: url(img/cont.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: aliceblue;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.name-id,
+.buttons,
+.weight-height {
+    display: flex;
+    justify-content: start;
+    gap: 23px;
+    text-align: left;
+}
+
+#types {
+    text-transform: uppercase;
+}
+
+.name-id {
+    font-size: large;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.buttons {
+    margin: 1rem 0 20px;
+    font-size: large;
+}
+
+.buttons p,
+#search-button {
+    background-color: gainsboro;
+    color: black;
+    width: 6rem;
+    text-align: center;
+    border-radius: 6px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 200px 100px;
+    border: 3px solid white;
+    width: 270px;
+    padding: 10px;
+}
+
+
+#error-message {
+    color: red;
+}
+
+
+#loader {
+    width: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #000;
+    box-shadow: 0 0 0 0 #0004;
+    animation: l2 1.5s infinite linear;
+    position: relative;
+    display: flex;
+    align-self: center;
+    visibility: hidden;
+}
+
+#loader:before,
+#loader:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: 0 0 0 0 #0004;
+    animation: inherit;
+    animation-delay: -0.5s;
+}
+
+#loader:after {
+    animation-delay: -1s;
+}
+
+@keyframes l2 {
+    100% {
+        box-shadow: 0 0 0 40px #0000
+    }
+}
